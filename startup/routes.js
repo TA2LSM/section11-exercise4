@@ -20,4 +20,5 @@ module.exports = function (app) {
 
   // Error handling middleware fonksiyonu
   app.use(error); // fonksiyonu referans geçiyoruz çağırmıyoruz ( error() değil !!! )
+  // express'ten oluşturulan "app" uygulaması, error middleware'ini kullanacak
 };
