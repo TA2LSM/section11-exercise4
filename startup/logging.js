@@ -5,7 +5,7 @@ require("express-async-errors");
 module.exports.createErrorLogger = function (dbPath) {
   const logger = winston.createLogger({
     transports: [
-      new winston.transports.Console({ level: "info" }),
+      new winston.transports.Console({ colorize: true, prettyPrint: true }),
       new winston.transports.File({ filename: "./logs/combined.log", level: "info" }),
       new winston.transports.MongoDB({ db: dbPath, level: "error" }),
       new winston.transports.File({
